@@ -1,11 +1,9 @@
-
 public class DiningHallRunner {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		DiningHall Thacher = new DiningHall();
+		Thacher.setTitle("Dining Hall Assignment");
+		Thacher.setVisible(true);
 
 	}
 
