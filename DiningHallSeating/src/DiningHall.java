@@ -3,7 +3,9 @@
 //Approximate Starting Date: 12/1/01
 //Finish Date: 
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
+
 import java.io.*;
 import java.util.*;
 import java.util.regex.Pattern;
@@ -67,7 +69,7 @@ public class DiningHall extends JFrame implements ActionListener {
 		try {
 
 			UIManager GUI = new UIManager();
-			GUI.setLookAndFeel(GUI.getCrossPlatformLookAndFeelClassName());
+			//UIManager.setLookAndFeel(GUI.getCrossPlatformLookAndFeelClassName());
 
 		} catch (Exception e) {
 		}
@@ -91,7 +93,7 @@ public class DiningHall extends JFrame implements ActionListener {
 		
 		JButton buttonToAdd;
 
-		buttonToAdd = new JButton("HELLO?!?!?", new ImageIcon("data/save.gif"));
+		buttonToAdd = new JButton("HELLO?!?!?", new ImageIcon("Data/saveIcon.gif"));
 
 		myToolBar.add(buttonToAdd);
 	}
@@ -1793,14 +1795,5 @@ public class DiningHall extends JFrame implements ActionListener {
 		}
 		return count == DiningRoom.size(); 
 	}
-		
 
-	// ************************************************************************************************
-	// /////////////////////////////////////////////MAIN///////////////////////////////////////////////
-
-	public static void main(String args[]) {
-		DiningHall Thacher = new DiningHall();
-		Thacher.setTitle("Dining Hall Assignment");
-		Thacher.setVisible(true);
-	}
 }
