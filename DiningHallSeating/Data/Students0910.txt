@@ -104,12 +104,10 @@ Lewis Skylar 0 M.Henry 0 TC 10 0 5 4 1951 0 0 0 30 27 14
 Liang Wesley 0 M.Henry 0 TC 10 0 5 4 1951 0 0 0 30 5 22
 Lopez Marissa 0 M.Henry 0 TC 10 0 5 4 1951 0 0 0 30 2 26
 *McMahon Griffin 0 M.Henry 0 LP 10 1 5 4 1951 0 0 0 30 30 30
-Metz Sarah 0 M.Henry 0 TC 10 0 5 4 1951 0 0 0 30 9 20
 Mirbach Kenlyn 0 M.Henry 0 TC 10 0 5 4 1951 0 0 0 30 4 19
 Morgenstein Charlie 0 M.Henry 0 LP 10 1 5 4 1951 0 0 0 30 5 22
 Ntshaykolo Andre 0 M.Henry 0 LP 10 1 5 4 1951 0 0 0 30 15 25
 *Ongley Sasha 0 M.Henry 0 TC 10 0 5 4 1951 0 0 0 30 30 30
-Parrish Maddie 0 M.Henry 0 TC 10 0 5 4 1951 0 0 0 30 25 27
 Richardson Jack 0 M.Henry 0 LP 10 1 5 4 1951 0 0 0 30 16 24
 Rodriguez Meagan 0 M.Henry 0 TC 10 0 5 4 1951 0 0 0 30 1 21
 Rogowski Emma 0 M.Henry 0 TC 10 0 5 4 1951 0 0 0 30 8 15
@@ -134,7 +132,7 @@ Boyle Lili 0 M.Henry 0 TH 11 0 5 4 1951 0 0 0 30 9 2
 CŽva‘r-Corey Pascal 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 22 26
 Chang Jon 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 16 17
 Chao David 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 16 14
-*Choi Minah> 0 M.Henry 0 TH 11 0 5 4 1951 0 0 0 30 30 30
+Choi Minah 0 M.Henry 0 TH 11 0 5 4 1951 0 0 0 30 30 30
 *Combs Drew 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 30 30
 Couturie Caleb 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 17 3
 Davis Teo 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 6 5
@@ -144,12 +142,11 @@ Elkin Jillian 0 M.Henry 0 TH 11 0 5 4 1951 0 0 0 30 16 23
 Ellman Grant 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 5 22
 Gulick-Stutz Reed 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 20 17
 Hanks Truman 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 14 23
-*Hayman Harry> 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 30 30
+Hayman Harry 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 30 30
 Hayne Isobel 0 M.Henry 0 TH 11 0 5 4 1951 0 0 0 30 15 27
 *Herzig Erich 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 30 30
 Ho-Israel Leah 0 M.Henry 0 TH 11 0 5 4 1951 0 0 0 30 11 1
-Holmberg Bobby 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 21 27
-Hunter-Daniel Quincy^ 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 7 18
+*Hunter-Daniel Quincy^ 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 7 18
 Jiang Felicia 0 M.Henry 0 TH 11 0 5 4 1951 0 0 0 30 23 6
 Kalkin Wallace 0 M.Henry 0 TH 11 0 5 4 1951 0 0 0 30 24 10
 Kidd Nayla 0 M.Henry 0 TH 11 0 5 4 1951 0 0 0 30 10 26
@@ -168,7 +165,7 @@ Nutting Lachlan 0 M.Henry 0 TH 11 0 5 4 1951 0 0 0 30 19 18
 Penner Cooper 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 12 6
 Purcell Alex 0 M.Henry 0 TH 11 0 5 4 1951 0 0 0 30 20 4
 Renfrew Susanna 0 M.Henry 0 TH 11 0 5 4 1951 0 0 0 30 8 3
-*Rex Rachel> 0 M.Henry 0 TH 11 0 5 4 1951 0 0 0 30 30 30
+Rex Rachel 0 M.Henry 0 TH 11 0 5 4 1951 0 0 0 30 30 30
 Rhee Jeffrey 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 4 16
 Rubeli Madison 0 M.Henry 0 TH 11 0 5 4 1951 0 0 0 30 13 21
 Rush Jamie 0 M.Henry 0 US 11 1 5 4 1951 0 0 0 30 3 20

@@ -5,6 +5,10 @@ import java.util.Vector;
 
 public class Assignment {
 	
+	public Assignment(){
+		
+	}
+	
 	
 	public static Vector shuffle(Vector thisVector) {
 

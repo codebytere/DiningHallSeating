@@ -22,6 +22,8 @@ public class DiningHall extends JFrame implements ActionListener {
 	public static Random R = new Random(); // random# gen for shuffling students
 
 	public static EasyReader con = new EasyReader(); // global console
+	
+	public static Assignment assigner = new Assignment();
 
 	// /////////////////////////////////// Faculty, Students, Tables// ////////////////////////////
 	private static Vector Faculty = new Vector(); // database of all faculty
@@ -36,8 +38,7 @@ public class DiningHall extends JFrame implements ActionListener {
 
 	private static Vector StuIDs = new Vector();
 
-	// //////////////////////////////////// GUI
-	// ///////////////////////////////////////
+	// //////////////////////////////////// GUI ///////////////////////////////////////
 	JToolBar myTools = new JToolBar();
 	JMenuBar myMenu = new JMenuBar();
 	public static JTabbedPane setup = new JTabbedPane();
@@ -440,7 +441,7 @@ public class DiningHall extends JFrame implements ActionListener {
 				System.out.println(count);
 				
 				///if the table has two teachers and isn't a floater table
-				if(count != 3 && count != 7 && count != 8 && count != 9){
+				if(count != 3 && count != 7 && count != 8 && count != 9 && count != 15){
 				boolean genderOne = false;
 				boolean genderTwo = false;
 				aName = parts[0] + " " + parts [1] + " " + parts[2] + " " + parts[3];
@@ -488,6 +489,43 @@ public class DiningHall extends JFrame implements ActionListener {
 					Faculty.addElement(teach);
 					//System.out.println(teach.getName());
 					count++;
+				}
+				
+				//three teachers at 15
+				else if(count == 15){
+					boolean genderOne = false;
+					boolean genderTwo = false;
+					boolean genderThree = false;
+					aName = parts[0] + " " + parts [1] + " " + parts[2] + " " + parts[3] + " " + parts[4] + " " + parts[5];
+					seats = Integer.parseInt(parts[6]);
+					seatsTaken = Integer.parseInt(parts[7]);
+					flStatus = Integer.parseInt(parts[8]);
+					Table addTable = new Table(count, aName, seats, seatsTaken,
+							flStatus);
+					DiningRoom.addElement(addTable);
+					
+					if(parts[0].equals("Mr."))
+						genderOne = true;
+					else if(parts[0].equals("Ms.") || parts[0].equals("Mrs."))
+						genderOne = false;
+					Teacher teachOne = new Teacher(genderOne, parts[1], seats, count);
+					Faculty.addElement(teachOne);
+					
+					if(parts[2].equals("Mr."))
+						genderTwo = true;
+					else if(parts[2].equals("Ms.") || parts[0].equals("Mrs."))
+						genderTwo = false;
+					Teacher teachTwo = new Teacher(genderTwo, parts[3], seats, count);
+					Faculty.addElement(teachTwo);
+					
+					if(parts[4].equals("Mr."))
+						genderTwo = true;
+					else if(parts[4].equals("Ms.") || parts[0].equals("Mrs."))
+						genderTwo = false;
+					Teacher teachThree = new Teacher(genderTwo, parts[3], seats, count);
+					Faculty.addElement(teachTwo);
+					count++;
+					
 				}
 				
 				//floater tables (no teachers)
@@ -1785,11 +1823,11 @@ public class DiningHall extends JFrame implements ActionListener {
 			Table t = (Table)DiningRoom.elementAt(i);
 			if(i != 7 && i != 8){ //checks tables w/ frosh
 				System.out.println(t.getMales() + "-" + t.getFemales() + "-" + t.getNines() + "-" + t.getTens() + "-" + t.getElevens() + "-" + t.getTwelves());
-				if( t.getMales() > 0 && t.getFemales() > 0 && t.getNines() > 0 && t.getTens() > 0 && t.getElevens() > 0 && t.getTwelves() > 0)
+				if( t.getMales() > 1 && t.getFemales() > 1 && t.getNines() > 0 && t.getTens() > 0 && t.getElevens() > 0 && t.getTwelves() > 0)
 					count++;
 			}
 			else{ //no frosh at floater tables (8 & 9)
-				if(t.getMales() > 0 && t.getFemales() > 0 && t.getNines() == 0 && t.getTens() > 0 && t.getElevens() > 0 && t.getTwelves() > 0)
+				if(t.getMales() > 0 && t.getFemales() > 1 && t.getNines() == 0 && t.getTens() > 0 && t.getElevens() > 0 && t.getTwelves() > 0)
 					count++;
 			}
 		}
