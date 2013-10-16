@@ -22,8 +22,6 @@ public class DiningHall extends JFrame implements ActionListener {
 	public static Random R = new Random(); // random# gen for shuffling students
 
 	public static EasyReader con = new EasyReader(); // global console
-	
-	public static Assignment assigner = new Assignment();
 
 	// /////////////////////////////////// Faculty, Students, Tables// ////////////////////////////
 	private static Vector Faculty = new Vector(); // database of all faculty
@@ -115,7 +113,7 @@ public class DiningHall extends JFrame implements ActionListener {
 		menuItem.addActionListener(this);
 		menu.add(menuItem);
 
-		menuItem = new JMenuItem("Import Seating Arrangement...");
+		menuItem = new JMenuItem("Save Seating Arrangement");
 		menuItem.addActionListener(this);
 		menu.add(menuItem);
 
@@ -358,7 +356,6 @@ public class DiningHall extends JFrame implements ActionListener {
 		}
 		// DROPDOWN MENU ACTIONS
 		else if (action.equals("Quit")) {
-			updateOnExit(Students);
 			System.exit(0);
 		} else if (action.equals("Add a student to a table...")) {
 			addStudentToTable();
@@ -376,17 +373,16 @@ public class DiningHall extends JFrame implements ActionListener {
 					"Saving seating arrangment to    Lists/" + fileName);
 			writeTableAssignmentByTable("Lists/" + fileName);
 			writeTableAssignmentByStudent("Lists/" + fileName);
-		} else if (action.equals("Import Seating Arrangement...")) {
-			fileName = JOptionPane
-					.showInputDialog("this feature not activated: ");
-			
-		} else if (action.equals("Seat Students at Random")) {
+		} else if (action.equals("Save Seating Arrangement...")) {
 			updateTables();
+			updateFile(Students);
+		} else if (action.equals("Seat Students at Random")) {
+			//updateTables();
 			assignHall();
 			while(!allGood()) //if students are not seated according to criteria
 				assignHall(); 
 			updateAll(); //only display the seated students when they are seated correctly
-			updateOnExit(Students);
+			updateFile(Students);
 		} else if (action.equals("Seat Students by Birthday")){
 			assignByBirthday();
 			updateAll();
@@ -1192,11 +1188,11 @@ public class DiningHall extends JFrame implements ActionListener {
 	}
 }
 	
-	private void updateOnExit(Vector stuList) {
+	private void updateFile(Vector stuList) {
 		//for some reason FileInputStream won't recognize a file unless the explicit file path is included
 		//is there a way to remedy this? EasyReader doesn't require this extra info
 		File file = new File(
-				"/Users/Shelley/Documents/DiningHallSeating/DHS/DiningHallSeating/Data"
+				"/Users/Shelley/Documents/DiningHallSeating/DHS/DiningHallSeating/Data/"
 						+ "Students0910.txt");
 		FileInputStream fis = null;
 		try {
