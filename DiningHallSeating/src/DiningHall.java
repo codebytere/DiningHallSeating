@@ -386,7 +386,7 @@ public class DiningHall extends JFrame implements ActionListener {
 			while(!allGood()) //if students are not seated according to criteria
 				assignHall(); 
 			updateAll(); //only display the seated students when they are seated correctly
-			updateArchiveFile(Students);
+			updateOnExit(Students);
 		} else if (action.equals("Seat Students by Birthday")){
 			assignByBirthday();
 			updateAll();
@@ -1138,8 +1138,8 @@ public class DiningHall extends JFrame implements ActionListener {
 
 	private void updateArchiveFile(Vector stuList){
 		File file = new File(
-				"/Applications/School/Robots & Data/Workbench/DiningHallSeating/Data/"
-						+ "StuArchive0910.txt");
+				"/Users/Shelley/Documents/DiningHallSeating/DHS/DiningHallSeating/Data/"
+						+ "Students0910.txt");
 		
 		FileInputStream fis = null;
 		
@@ -1180,8 +1180,8 @@ public class DiningHall extends JFrame implements ActionListener {
 
 		}
 		FileWriter writer = new FileWriter(
-				"/Applications/School/Robots & Data/Workbench/DiningHallSeating/Data/"
-						+ "StuArchive0910.txt");
+				"/Users/Shelley/Documents/DiningHallSeating/DHS/DiningHallSeating/Data/"
+						+ "Students0910.txt");
 		BufferedWriter bwrite = new BufferedWriter(writer);
 		bwrite.write(fileContent.toString());
 		bwrite.close();
@@ -1196,7 +1196,7 @@ public class DiningHall extends JFrame implements ActionListener {
 		//for some reason FileInputStream won't recognize a file unless the explicit file path is included
 		//is there a way to remedy this? EasyReader doesn't require this extra info
 		File file = new File(
-				"/Applications/School/Robots & Data/Workbench/DiningHallSeating/Data/"
+				"/Users/Shelley/Documents/DiningHallSeating/DHS/DiningHallSeating/Data"
 						+ "Students0910.txt");
 		FileInputStream fis = null;
 		try {
@@ -1259,7 +1259,7 @@ public class DiningHall extends JFrame implements ActionListener {
 
 			}
 			FileWriter writer = new FileWriter(
-					"/Applications/School/Robots & Data/Workbench/DiningHallSeating/Data/"
+					"/Users/Shelley/Documents/DiningHallSeating/DHS/DiningHallSeating/Data"
 							+ "Students0910.txt");
 			BufferedWriter bwrite = new BufferedWriter(writer);
 			bwrite.write(fileContent.toString());
@@ -1823,11 +1823,11 @@ public class DiningHall extends JFrame implements ActionListener {
 			Table t = (Table)DiningRoom.elementAt(i);
 			if(i != 7 && i != 8){ //checks tables w/ frosh
 				System.out.println(t.getMales() + "-" + t.getFemales() + "-" + t.getNines() + "-" + t.getTens() + "-" + t.getElevens() + "-" + t.getTwelves());
-				if( t.getMales() > 1 && t.getFemales() > 1 && t.getNines() > 0 && t.getTens() > 0 && t.getElevens() > 0 && t.getTwelves() > 0)
+				if( t.getMales() > 0 && t.getFemales() > 0 && t.getNines() > 0 && t.getTens() > 0 && t.getElevens() > 0 && t.getTwelves() > 0)
 					count++;
 			}
 			else{ //no frosh at floater tables (8 & 9)
-				if(t.getMales() > 0 && t.getFemales() > 1 && t.getNines() == 0 && t.getTens() > 0 && t.getElevens() > 0 && t.getTwelves() > 0)
+				if(t.getMales() > 0 && t.getFemales() > 0 && t.getNines() == 0 && t.getTens() > 0 && t.getElevens() > 0 && t.getTwelves() > 0)
 					count++;
 			}
 		}
